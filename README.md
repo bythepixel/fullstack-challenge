@@ -2,13 +2,14 @@
 
 ## Instructions
 Using Laravel and VueJS, create an application which shows the weather for a set of users.
-- Landing page is a list of users and their current weather
-- Clicking a user row opens a modal with that users detailed weather report
-- Weather update should be no older than 1 hour
-- API request(s) to retrieve weather data should take no longer than 500ms
+- Create a fork of this repository. Once completed, send link to interviewer.
+- Update landing page to show a list of users and their current weather.
+- Clicking a user row opens a modal or screen which shows that users detailed weather report.
+- Weather update should be no older than 1 hour.
+- Internal API request(s) to retrieve weather data should take no longer than 500ms.
 
 ## Things to consider:
-- Chose your own weather api such as https://openweathermap.org/api, https://www.weather.gov/documentation/services-web-api etc.
+- Chose your own weather api such as https://openweathermap.org/api, https://www.weather.gov/documentation/services-web-api etc
 - Testability
 - Best practices
 - Design patterns
