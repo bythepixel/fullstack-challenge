@@ -13,6 +13,7 @@ Using Laravel and VueJS, create an application which shows the weather for a set
 - Best practices
 - Design patterns
 - Availability of external APIs is not guaranteed and should not cause page to crash
+- Twenty randomized users are added via the seeder process, each having their own unique location (longitude and latitude)
 - Anything else you want to do to show off your coding chops!
 
 ## To run the local dev environment:
