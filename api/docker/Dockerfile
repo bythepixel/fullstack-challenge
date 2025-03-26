@@ -4,7 +4,8 @@ RUN apt-get update
 
 RUN apt-get install -y \
     pkg-config  \
-    libzip-dev
+    libzip-dev \
+    libicu-dev
 
 RUN docker-php-ext-configure pcntl --enable-pcntl
 RUN docker-php-ext-configure intl
@@ -14,9 +15,9 @@ RUN docker-php-ext-install \
     mysqli \
     pdo_mysql \
     zip \
-    pctnl \
+    pcntl \
     intl
-    
+
 RUN docker-php-ext-enable redis
 
 
