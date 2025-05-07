@@ -1,6 +1,6 @@
 import { ref, shallowRef } from "vue";
 import User from "@/components/User.vue";
-import {UserType} from "@/stores/dashboard";
+import type {UserType} from "@/stores/dashboard";
 
 
 const show = ref(false);

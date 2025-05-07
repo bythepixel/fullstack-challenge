@@ -1,2 +1,34 @@
-Process:
+Thoughts:
+500ms is a lot, but not really enough for 2 service calls like we need for the weather gov service.
+Gotta cache or store the grid coordinates needed to fetch weather
+
+Not sure if there is a difference for the task between an hourly forecast or 'current weather' and the 'extended forcast'...
+I am taking them to mean, display current user forecast on the dashboard, extended forecast (multiple lines of forecast) as opposed to just displaying more of the current forecast
+
+weather gov seems to have coordinates I can't get weather for, I am choosing to allow those to show as blank to show the error fallbacks
+but you could just as easily update the coords to new random points that can be plotted
+added restrictions to the coords assigned in the seeder to only pick lat/lon in the us, still picks some number of invalid or erroring out coordinates
+
+
+
+Doing things a little quick and dirty as far as the caching goes without use cases and more realistic real time expectations
+
+Added a caching console command and added updates to the scheduler.
+I am not certain of how it is configured under the hood, as the last time I used this feature it was all manual, so hopefully the scheduling is working
+
+I added a setup script that will do the initial caching by running the console command
+
+Updated the readme with instructions to run the setup command (cleans up the setup a bit, but I didn't bother with proper permissions on things since this is not a real app)
+
+Didn't set csp since this isn't a real app, but it could be locked down pretty tight if we swapped the font-awesome to local or a single image, then check whether any of our libs use inline css as opposed to class based etc
+
+
+
+Haven't used pinia and typescript as much, but these seem nice enough to work with.
+I am maybe being a little clumsy with variables and style, but a lot can be cleaned up with code style
+
+I should probably have reorganized the dashboard component a bit as it is not super well split up around the weather components
+
+Didn't end up using the refresh endpoint, but it could just be triggered on a time loop to prevent stale access, which I guess is the point of the excercise....
+
 

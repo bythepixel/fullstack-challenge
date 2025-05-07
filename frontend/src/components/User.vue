@@ -7,11 +7,11 @@
 
 <template>
 <div>
-  <div v-if="dashboardStore.currentUser!==null">
+  <div v-if="dashboardStore.currentUser">
     Loading...
   </div>
   <div v-else>
-    <h1>{{}}</h1>
+    <h1>{{dashboardStore.currentUser}}</h1>
   </div>
 </div>
 </template>
