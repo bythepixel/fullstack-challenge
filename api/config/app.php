@@ -5,6 +5,11 @@ use Illuminate\Support\Facades\Facade;
 return [
 
     /*
+    Application Specific configs
+    */
+    'metaDataOutput'=>env('META_DATA_OUTPUT', false),
+
+    /*
     |--------------------------------------------------------------------------
     | Application Name
     |--------------------------------------------------------------------------

@@ -1,31 +1,18 @@
-<script>
-export default {
-  data: () => ({
-    apiResponse: null
-  }),
+<script setup>
+import {useDashboardStore} from "../stores/dashboard";
+import Dashboard from "@/components/Dashboard.vue";
+const dashboardStore = useDashboardStore();
 
-  created() {
-    this.fetchData()
-  },
 
-  methods: {
-    async fetchData() {
-      const url = 'http://localhost/'
-      this.apiResponse = await (await fetch(url)).json()
-    }
-  }
-}
 </script>
 
 <template>
-  <div v-if="!apiResponse">
+  <div v-if="!dashboardStore.all">
     Pinging the api...
   </div>
 
-  <div v-if="apiResponse">
+  <div v-if="dashboardStore.all">
     The api responded with: <br />
-    <code>
-    {{ apiResponse }}
-    </code>
+    <Dashboard />
   </div>
 </template>
