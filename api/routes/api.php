@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserWeatherController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,3 +21,8 @@ Route::get('/', function () {
         'users' => \App\Models\User::all(),
     ]);
 });
+
+
+Route::get('/api/user/dashboard', [UserWeatherController::class, 'dashboard']);
+Route::get('/api/user/{id}/forecast', [UserWeatherController::class, 'userForecast'])->where('id', '[0-9]+');
+Route::get('/api/user/{id}/forecast/refresh', [UserWeatherController::class, 'refresh'])->where('id', '[0-9]+');
