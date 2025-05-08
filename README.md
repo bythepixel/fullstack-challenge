@@ -6,19 +6,22 @@ Using Laravel and Vue.js, create an application which shows the weather for a se
 ## Acceptance Criteria
 Instructions are purposely left somewhat open-ended to allow the developer to make some of their own decisions on implementation and design. We have provided some initial scaffolding structure/examples, however feel free to make it your own and remove anything unnecessary.
 
-1. Copy this repository to your own GitHub account (do not fork).
-2. Create a branch off of the `main` branch to do your work on.
-3. Chose your own weather API, such as:
+1. Create a branch off of the `main` branch to do your work on.
+2. Chose your own weather API, such as:
    - https://openweathermap.org/api
    - https://www.weather.gov/documentation/services-web-api
-4. Show a list of users and their current weather.
+3. Show a list of users and their current weather.
    - Use the twenty randomized users generated from the seeder process, each having their own unique location (longitude and latitude).
    - The current weather conditions shown here should be no older than 1 hour.
-5. Clicking a user should open a modal or screen, which shows that user's detailed weather report.
+4. Clicking a user should open a modal or screen, which shows that user's detailed weather report.
    - The current weather conditions shown here should be no older than 1 hour.
-6. Internal API request(s) to retrieve weather data should take no longer than 500ms.
+5. Internal API request(s) to retrieve weather data should take no longer than 500ms.
    - Consider that external APIs could and will take longer than this from time to time and should be accounted for.
-7. The availability of external APIs is not guaranteed and should not cause the page to crash.
+6. The availability of external APIs is not guaranteed and should not cause the page to crash.
+
+As you complete this challenge, please add comments or TODOs in your code to highlight any improvements or additional functionality you would have implemented if you had more time. This could include things like performance optimizations, additional test coverage, refactoring opportunities, or feature enhancements.
+
+This helps us understand your thought process, prioritization, and awareness of best practices.
 
 Once completed:
 1. Open a PR to merge the branch you did your work on into the `main` branch so our team can provide code review comments.
