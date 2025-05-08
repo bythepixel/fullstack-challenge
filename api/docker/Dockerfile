@@ -1,15 +1,25 @@
-FROM php:8.1-apache
+FROM php:8.3-apache
 
 RUN apt-get update
 
 RUN apt-get install -y \
     pkg-config  \
-    libzip-dev
+    libzip-dev \
+    libicu-dev
+
+RUN docker-php-ext-configure pcntl --enable-pcntl
+RUN docker-php-ext-configure intl
+RUN pecl install redis
 
 RUN docker-php-ext-install \
     mysqli \
     pdo_mysql \
-    zip
+    zip \
+    pcntl \
+    intl
+
+RUN docker-php-ext-enable redis
+
 
 ENV APACHE_DOCUMENT_ROOT /var/www/html/public
 
