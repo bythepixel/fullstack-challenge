@@ -6,7 +6,7 @@ Using Laravel and Vue.js, create an application which shows the weather for a se
 ## Acceptance Criteria
 Instructions are purposely left somewhat open-ended to allow the developer to make some of their own decisions on implementation and design. We have provided some initial scaffolding structure/examples, however feel free to make it your own and remove anything unnecessary.
 
-1. Create a branch off of the `main` branch to do your work on.
+1. Fork this repo and work off of your forked version.
 2. Chose your own weather API, such as:
    - https://openweathermap.org/api
    - https://www.weather.gov/documentation/services-web-api
