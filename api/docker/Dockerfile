@@ -5,11 +5,15 @@ RUN apt-get update
 RUN apt-get install -y \
     pkg-config  \
     libzip-dev \
-    libicu-dev
+    libicu-dev \
+    git \
+    build-essential \
+    autoconf
 
 RUN docker-php-ext-configure pcntl --enable-pcntl
 RUN docker-php-ext-configure intl
-RUN pecl install redis
+# Skip Redis extension for now - available through predis package
+# RUN pecl install redis
 
 RUN docker-php-ext-install \
     mysqli \
@@ -18,7 +22,7 @@ RUN docker-php-ext-install \
     pcntl \
     intl
 
-RUN docker-php-ext-enable redis
+# RUN docker-php-ext-enable redis
 
 
 ENV APACHE_DOCUMENT_ROOT /var/www/html/public
